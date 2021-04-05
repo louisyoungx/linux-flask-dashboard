@@ -57,7 +57,7 @@ cd linux-flask-dashboard
 ## 3. use pip to install requirements
 python3 -m pip install -r requirements.txt
 
-##(若第三步CentOS系统安装psutil报错，可尝试)
+##(若第三步CentOS系统安装psutil报错，可尝试 / 若CentOS启动后打不开页面，请检查firewalld防火墙配置！)
 # yum -y install python3-devel
 
 ```

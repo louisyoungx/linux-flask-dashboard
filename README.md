@@ -85,7 +85,7 @@ python index.py
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 ```
 
-### 方法一（使用源代码创建Docker镜像）
+##### 方法一（使用源代码创建Docker镜像）
 ```sh
 ## 1. go to the cloned directory
 cd linux-flask-dashboard
@@ -100,7 +100,7 @@ docker run -itd -p 12005:12005 --restart=always --name flask-dash-test linux-fla
 # 浏览器访问 http://0.0.0.0:12005
 ```
 
-### 方法二（从Docker Hub拉取镜像）
+##### 方法二（从Docker Hub拉取镜像）
 ```sh
 ## 1. pull from docker hub
 docker pull louisyoung1/linux-flask-dashboard

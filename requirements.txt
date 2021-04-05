@@ -1,0 +1,6 @@
+glob2==0.7
+psutil==5.8.0
+netifaces==0.10.9
+zerorpc==0.6.3
+gevent==21.1.2
+Flask==1.1.2

@@ -48,14 +48,17 @@ python3 -m pip install -r requirements.txt
 或者，如果你喜欢手动下载:
 
 ```sh
-## 1. Download the .zip
+## 1. Download the .zip & unzipped dir
 curl -LOk https://gitee.com/louisyoung1/linux-flask-dashboard/repository/archive/master.zip && unzip master.zip
 
-## 2. navigate to downloaded & unzipped dir
+## 2. go to the downloaded directory
 cd linux-flask-dashboard
 
 ## 3. use pip to install requirements
 python3 -m pip install -r requirements.txt
+
+##(若第三步CentOS系统安装psutil报错，可尝试)
+# yum -y install python3-devel
 
 ```
 

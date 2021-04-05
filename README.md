@@ -188,7 +188,7 @@ e.g: `$ PSDASH_CONFIG=/home/user/config.py psdash`
 
 **强烈建议 **在安全的环境下安装**[Linux Flask Dashboard](https://gitee.com/louisyoung1/linux-flask-dashboard)**
 
-**[Linux Flask Dashboard](https://gitee.com/louisyoung1/linux-flask-dashboard)** 不提供任何安全性或身份验证特性。
+**[Linux Flask Dashboard](https://gitee.com/louisyoung1/linux-flask-dashboard)** 仅提供简单安全性与身份验证特性。
 
 ## 八、许可
 

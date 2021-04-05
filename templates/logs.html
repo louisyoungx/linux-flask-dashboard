@@ -1,0 +1,35 @@
+{% if not is_xhr|default(false) %}{% extends "base.html" %}{% endif -%}
+{% block content %}
+    <div id="logs" class="box">
+        <div class="box-header">
+            <span>Logs</span>
+            <small class="pull-right">The list of available logs is updated every minute</small>
+        </div>
+        <div class="box-content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>路径</th>
+                        <th>大小</th>
+                        <th>访问时间</th>
+                        <th>修改时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for log in logs %}
+                    <tr>
+                        <td>
+                            <a href="{{ url_for(".view_log", filename=log.path) }}">
+                                {{ log.path.decode("UTF-8") }}
+                            </a>
+                        </td>
+                        <td>{{ log.size|filesizeformat }}</td>
+                        <td>{{ log.atime|fromtimestamp }}</td>
+                        <td>{{ log.mtime|fromtimestamp }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

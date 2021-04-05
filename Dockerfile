@@ -1,18 +1,9 @@
-FROM ubuntu:16.04
-
-MAINTAINER louisyoung "1462648167@qq.com"
-
-RUN apt-get update -y && \  
-    apt-get install -y python3-pip python3-dev
-
-COPY ./requirements.txt /requirements.txt
-
+FROM python:3
 WORKDIR /
 
-RUN pip3 install -r requirements.txt
+COPY requirements.txt ./
+RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-COPY . /
+COPY . .
 
-ENTRYPOINT [ "python3" ]
-
-CMD [ "main.py" ]
+CMD ["python","./main.py"]

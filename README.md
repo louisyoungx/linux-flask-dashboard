@@ -71,19 +71,45 @@ python3 -m pip install -r requirements.txt
 
 #### 使用 Python
 ```sh
-# Start the server (on port 80 by default; may require sudo).
+## 1. Start the server (on port 12005 by default; may require sudo).
 python index.py
+
+## 2. Open your browser to visit [http://0.0.0.0:12005]  (on port 12005 by default; may require sudo)
+# 浏览器访问 http://0.0.0.0:12005
 ```
 
 #### 使用 Docker
-
 确保你已经启用了Docker，你可以用一行命令安装Docker
-
 ```sh
+## make sure you have install docker in your server
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
 
-## 未完待续······
+### 方法一（使用源代码创建Docker镜像）
+```sh
+## 1. go to the cloned directory
+cd linux-flask-dashboard
 
+## 2. build docker image
+sudo docker build -t linux-flask-dashboard .
+
+## 3. start docker container
+docker run -itd -p 12005:12005 --restart=always --name flask-dash-test linux-flask-dashboard:latest
+
+## 2. Open your browser to visit [http://0.0.0.0:12005]  (on port 12005 by default; may require sudo)
+# 浏览器访问 http://0.0.0.0:12005
+```
+
+### 方法二（从Docker Hub拉取镜像）
+```sh
+## 1. pull from docker hub
+docker pull louisyoung1/linux-flask-dashboard
+
+## 2. start docker container
+docker run -itd -p 12005:12005 --restart=always --name flask-dash-test linux-flask-dashboard:latest
+
+## 3. Open your browser to visit [http://0.0.0.0:12005]  (on port 12005 by default; may require sudo)
+# 浏览器访问 http://0.0.0.0:12005
 ```
 
 ## 三、快速上手

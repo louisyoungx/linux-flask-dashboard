@@ -63,8 +63,8 @@ python3 -m pip install -r requirements.txt
 
 详见 Linux Flask Dashboard 支持的版本 :
 
-* [Python](#使用 Python)
-* [Python](#使用 Docker)
+* [Python](#使用-Python)
+* [Docker](#使用-Docker)
 
 #### 使用 Python
 ```sh
